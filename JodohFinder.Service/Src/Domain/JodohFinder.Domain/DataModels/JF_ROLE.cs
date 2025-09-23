@@ -7,5 +7,11 @@
 
         public ICollection<JF_USER> JF_USER { get; set; }
 
+        public JF_ROLE()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 }

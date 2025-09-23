@@ -18,13 +18,6 @@ namespace JodohFinder.Entity.Configuration
                    .IsRequired();
 
             builder.Property(a => a.VOUCHER_USEDATE);
-
-            builder.Property(a => a.VOUCHER_USERID);
-
-            builder.HasOne(a => a.JF_PARTICIPANT)
-                   .WithOne(p => p.JF_VOUCHER)
-                   .HasForeignKey<JF_PARTICIPANT>(p => p.PARTICIPANT_VOUCHER_ID)
-                   .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

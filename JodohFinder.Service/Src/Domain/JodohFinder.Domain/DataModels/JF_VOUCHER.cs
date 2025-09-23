@@ -8,9 +8,14 @@
         public DateTime? VOUCHER_USEDATE { get; set; }
         public string VOUCHER_STATUS { get; set; }
 
-        public Guid VOUCHER_USERID { get; set; }
-
-        public JF_USER JF_User { get; set; }
+        public JF_USER JF_USER { get; set; }
         public JF_PARTICIPANT JF_PARTICIPANT { get; set; }
+
+        public JF_VOUCHER()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 }

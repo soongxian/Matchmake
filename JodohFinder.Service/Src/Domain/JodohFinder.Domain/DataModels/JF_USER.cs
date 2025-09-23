@@ -9,5 +9,12 @@
         public Guid USER_ROLE_ID { get; set; }
 
         public JF_ROLE JF_ROLE { get; set; }
+
+        public JF_USER()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 }

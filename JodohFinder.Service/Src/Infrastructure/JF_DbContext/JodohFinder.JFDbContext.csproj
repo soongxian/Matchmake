@@ -12,6 +12,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.20" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.20">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\JodohFinder.Domain\JodohFinder.Domain.csproj" />
+    <ProjectReference Include="..\JodohFinder.Entity.Configuration\JodohFinder.Entity.Configuration.csproj" />
   </ItemGroup>
 
 </Project>

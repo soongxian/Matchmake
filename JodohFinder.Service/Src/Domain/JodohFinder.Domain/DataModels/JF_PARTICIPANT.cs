@@ -11,8 +11,14 @@
         public Guid PARTICIPANT_VOUCHER_ID { get; set; }
         public Guid PARTICIPANT_AGEGROUP_ID { get; set; }
 
-
         public JF_VOUCHER JF_VOUCHER { get; set; }
         public JF_AGEGROUP JF_AGEGROUP { get; set; }
+
+        public JF_PARTICIPANT()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 }

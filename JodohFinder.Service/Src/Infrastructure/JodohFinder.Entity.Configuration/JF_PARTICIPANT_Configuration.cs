@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace JodohFinder.Entity.Configuration
 {
-    public class JF_PARTICIPANT_Configuration : IEntityTypeConfiguration<JF_PARTICIPANT>
+    public partial class JF_PARTICIPANT_Configuration : IEntityTypeConfiguration<JF_PARTICIPANT>
     {
         public void Configure(EntityTypeBuilder<JF_PARTICIPANT> builder)
         {
@@ -28,7 +28,7 @@ namespace JodohFinder.Entity.Configuration
 
             builder.HasOne(p => p.JF_VOUCHER)
                    .WithOne(v => v.JF_PARTICIPANT)
-                   .HasForeignKey<JF_PARTICIPANT>(p => p.VOUCHER_ID);
+                   .HasForeignKey<JF_PARTICIPANT>(p => p.PARTICIPANT_VOUCHER_ID);
 
             builder.HasOne(p => p.JF_AGEGROUP)
                    .WithMany(a => a.JF_PARTICIPANT)

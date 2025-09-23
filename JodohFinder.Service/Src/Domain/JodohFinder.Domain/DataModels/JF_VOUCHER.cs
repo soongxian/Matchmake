@@ -1,6 +1,6 @@
 ﻿namespace JodohFinder.Domain
 {
-    public class JF_VOUCHER
+    public partial class JF_VOUCHER
     {
         public Guid VOUCHER_ID { get; set; }
         public string VOUCHER_CODE { get; set; }

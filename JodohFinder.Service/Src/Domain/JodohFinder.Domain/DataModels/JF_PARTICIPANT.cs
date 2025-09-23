@@ -8,7 +8,7 @@
         public string PARTICIPANT_CONTACT { get; set; }
         public DateTime PARTICIPANT_CREDATE { get; set; }
 
-        public Guid VOUCHER_ID { get; set; }
+        public Guid PARTICIPANT_VOUCHER_ID { get; set; }
         public Guid PARTICIPANT_AGEGROUP_ID { get; set; }
 
 

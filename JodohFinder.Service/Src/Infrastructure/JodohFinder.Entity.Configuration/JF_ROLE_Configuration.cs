@@ -1,0 +1,27 @@
+﻿using JodohFinder.Domain;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace JodohFinder.Entity.Configuration
+{
+    public partial class JF_ROLE_Configuration : IEntityTypeConfiguration<JF_ROLE>
+    {
+        public void Configure(EntityTypeBuilder<JF_ROLE> builder)
+        {
+            builder.ToTable("JF_ROLE");
+            builder.HasKey(a => a.ROLE_ID);
+
+            builder.Property(a => a.ROLE_ID)
+                   .IsRequired();
+
+            builder.Property(a => a.ROLE_NAME)
+                   .IsRequired()
+                   .HasMaxLength(50);
+
+            builder.HasMany(a => a.JF_USER)
+                   .WithOne(p => p.JF_ROLE)
+                   .HasForeignKey(p => p.USER_ROLE_ID)
+                   .OnDelete(DeleteBehavior.Restrict);
+        }
+    }
+}

@@ -3,9 +3,9 @@
     public partial class JF_PARTICIPANT
     {
         // To do
-        public JF_PARTICIPANT InsertParticipant()
-        {
+        //public JF_PARTICIPANT InsertParticipant()
+        //{
 
-        }
+        //}
     }
 }

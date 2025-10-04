@@ -2,11 +2,11 @@
 using JodohFinder.Entity.Configuration;
 using Microsoft.EntityFrameworkCore;
 
-namespace JodohFinder.JFDbContext
+namespace JodohFinder.DbContextEF
 {
-    public class JFDbContext : DbContext
+    public class DbContextCore : DbContext
     {
-        public JFDbContext(DbContextOptions<JFDbContext> dbContextOptions) : base(dbContextOptions) { }
+        public DbContextCore(DbContextOptions<DbContextCore> dbContextOptions) : base(dbContextOptions) { }
 
         public virtual DbSet<JF_AGEGROUP> JF_AgeGroup { get; set; }
         public virtual DbSet<JF_PARTICIPANT> JF_Participant { get; set; }

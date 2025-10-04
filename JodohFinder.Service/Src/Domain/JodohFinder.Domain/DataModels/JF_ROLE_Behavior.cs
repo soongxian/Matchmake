@@ -2,10 +2,14 @@
 {
     public partial class JF_ROLE
     {
-        // To do
-        //public JF_ROLE InsertRole()
-        //{
+        public JF_ROLE GetRole(Guid roleId, CancellationToken cancellation)
+        {
+            var role = new JF_ROLE
+            {
 
-        //}
+            };
+
+            return role;
+        }
     }
 }

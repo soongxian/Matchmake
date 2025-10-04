@@ -21,6 +21,16 @@ namespace JodohFinder.Entity.Configuration
                    .WithMany(p => p.JF_USER)
                    .HasForeignKey(p => p.USER_ROLE_ID)
                    .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasData(
+                new JF_USER
+                {
+                    USER_ID = Guid.Parse("82417f8a-4801-4fb3-8c73-b6d93371fe82"),
+                    USER_USERNAME = "admin",
+                    USER_PASSWORD = "admin",
+                    USER_ROLE_ID = Guid.Parse("ca2e98ab-f8d8-46ec-b58f-adc5d1864a05")
+                }
+            );
         }
     }
 }

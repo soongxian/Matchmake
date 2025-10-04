@@ -7,19 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.20" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.20">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Infrastructure\JF_DbContext\JodohFinder.JFDbContext.csproj" />
+    <ProjectReference Include="..\..\Application\JodohFinder.Role.UseCase\JodohFinder.Role.UseCase.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\JodohFinder.DbContextEF\JodohFinder.DbContextEF.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\JodohFinder.Role.Implementation\JodohFinder.Role.Implementation.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,11 +2,17 @@
 {
     public partial class JF_USER
     {
-        public JF_USER(string username, string password, Guid roleId)
+        public JF_USER(Guid userId, string userUsername, string userPassword, Guid userRoleId)
         {
-            USER_USERNAME = username;
-            USER_PASSWORD = password;
-            USER_ROLE_ID = roleId;
+            USER_ID = userId;
+            USER_USERNAME = userUsername;
+            USER_PASSWORD = userPassword;
+            USER_ROLE_ID = userRoleId;
+        }
+
+        public void Update(string userPassword)
+        {
+            USER_PASSWORD = userPassword;
         }
     }
 }

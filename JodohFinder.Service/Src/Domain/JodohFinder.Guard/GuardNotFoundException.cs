@@ -2,6 +2,9 @@
 {
     public class GuardNotFoundException : GuardParentException
     {
-        public GuardNotFoundException(string id) : base($"{id} not found.") { }
+        public GuardNotFoundException(string id) : base($"{id} not found.")
+        {
+
+        }
     }
 }

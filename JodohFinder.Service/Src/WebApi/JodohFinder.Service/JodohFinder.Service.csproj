@@ -19,8 +19,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Application\JodohFinder.Role.UseCase\JodohFinder.Role.UseCase.csproj" />
+    <ProjectReference Include="..\..\Application\JodohFinder.User.UseCase\JodohFinder.User.UseCase.csproj" />
     <ProjectReference Include="..\..\Infrastructure\JodohFinder.DbContextEF\JodohFinder.DbContextEF.csproj" />
     <ProjectReference Include="..\..\Infrastructure\JodohFinder.Role.Implementation\JodohFinder.Role.Implementation.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\JodohFinder.User.Implementation\JodohFinder.User.Implementation.csproj" />
   </ItemGroup>
 
 </Project>

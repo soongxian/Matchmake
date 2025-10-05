@@ -9,13 +9,11 @@ namespace JodohFinder.Service.Controllers
     [Route("api/[controller]")]
     public class RoleController : Controller
     {
-        private readonly IRoleBS _roleBS;
         private readonly IMediator _Mediator;
 
-        public RoleController(IMediator mediator, IRoleBS roleBS)
+        public RoleController(IMediator mediator)
         {
             _Mediator = mediator;
-            _roleBS = roleBS;
         }
 
         [HttpGet]

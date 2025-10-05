@@ -8,12 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="9.3.1" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Application\JodohFinder.Role.UseCase\JodohFinder.Role.UseCase.csproj" />
+    <ProjectReference Include="..\..\Application\JodohFinder.User.UseCase\JodohFinder.User.UseCase.csproj" />
     <ProjectReference Include="..\JodohFinder.DbContextEF\JodohFinder.DbContextEF.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="User\" />
   </ItemGroup>
 
 </Project>

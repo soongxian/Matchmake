@@ -7,13 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="User\GetUser\" />
-    <Folder Include="User\DeleteUser\" />
-    <Folder Include="User\UpdateUser\" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <ProjectReference Include="..\..\Domain\JodohFinder.Domain\JodohFinder.Domain.csproj" />
+    <ProjectReference Include="..\..\Domain\JodohFinder.Guard\JodohFinder.Guard.csproj" />
   </ItemGroup>
 
 </Project>

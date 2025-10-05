@@ -1,5 +1,7 @@
 ﻿using JodohFinder.Role.Implementation;
 using JodohFinder.Role.UseCase;
+using JodohFinder.User.Service;
+using JodohFinder.User.UseCase;
 using MediatR;
 using System.Reflection;
 
@@ -11,6 +13,9 @@ namespace JodohFinder.Service
         {
             services.AddScoped<IRoleBS, RoleBS>();
             services.AddMediatR(typeof(GetRolesQuery).GetTypeInfo().Assembly);
+
+            services.AddScoped<IUserBS, UserBS>();
+            services.AddMediatR(typeof(GetUserQuery).GetTypeInfo().Assembly);
         }
     }
 }

@@ -19,16 +19,14 @@ namespace JodohFinder.Role.Implementation
             return await _dbContext.JF_Role.ToListAsync(cancellationToken);
         }
 
-        public async Task<JF_ROLE> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
+        public async Task<List<JF_ROLE>> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
             var role = await _dbContext.JF_Role.FirstOrDefaultAsync(r => r.ROLE_ID == id, cancellationToken);
-
             if (role is null)
             {
-                throw new KeyNotFoundException($"Role with id {id} not found.");
+                return null;
             }
-
-            return role;
+            return new List<JF_ROLE> { role };
         }
     }
 }

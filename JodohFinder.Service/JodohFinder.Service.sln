@@ -27,10 +27,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JodohFinder.User.UseCase", "Src\Application\JodohFinder.User.UseCase\JodohFinder.User.UseCase.csproj", "{9EF80432-72B5-4778-AE77-465176B765FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JodohFinder.Role.UseCase", "Src\Application\JodohFinder.Role.UseCase\JodohFinder.Role.UseCase.csproj", "{EE83D052-EA34-4C11-A2FB-A6E17104FD6D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3153B6C6-80DD-442F-9EAF-5B4DE183A360} = {3153B6C6-80DD-442F-9EAF-5B4DE183A360}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JodohFinder.Role.Implementation", "Src\Infrastructure\JodohFinder.Role.Implementation\JodohFinder.Role.Implementation.csproj", "{4FC0F1EA-152B-47F3-BF92-C63F94773DCB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JodohFinder.DbContextEF", "Src\Infrastructure\JodohFinder.DbContextEF\JodohFinder.DbContextEF.csproj", "{66B82F56-0BBC-0E7B-EDEF-84F71387CC92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JodohFinder.Guard", "Src\Domain\JodohFinder.Guard\JodohFinder.Guard.csproj", "{3153B6C6-80DD-442F-9EAF-5B4DE183A360}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +71,10 @@ Global
 		{66B82F56-0BBC-0E7B-EDEF-84F71387CC92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66B82F56-0BBC-0E7B-EDEF-84F71387CC92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66B82F56-0BBC-0E7B-EDEF-84F71387CC92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3153B6C6-80DD-442F-9EAF-5B4DE183A360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3153B6C6-80DD-442F-9EAF-5B4DE183A360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3153B6C6-80DD-442F-9EAF-5B4DE183A360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3153B6C6-80DD-442F-9EAF-5B4DE183A360}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +91,7 @@ Global
 		{EE83D052-EA34-4C11-A2FB-A6E17104FD6D} = {5F8CFDB6-652E-4C8D-9C7C-28DAF5AAADAE}
 		{4FC0F1EA-152B-47F3-BF92-C63F94773DCB} = {328C615D-4E06-40B5-A216-A1F55B023CF9}
 		{66B82F56-0BBC-0E7B-EDEF-84F71387CC92} = {328C615D-4E06-40B5-A216-A1F55B023CF9}
+		{3153B6C6-80DD-442F-9EAF-5B4DE183A360} = {EC30F0BE-8AA6-444B-B192-688FBB98C185}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83FCC896-E3B1-4ECF-A6C4-EED958AC62FA}

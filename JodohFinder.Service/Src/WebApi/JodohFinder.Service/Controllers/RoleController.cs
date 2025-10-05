@@ -19,10 +19,12 @@ namespace JodohFinder.Service.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<RoleDTO>>> GetAllRoles()
+        [ProducesResponseType(typeof(List<RoleDTO>), 200)]
+        [ProducesResponseType(typeof(object), 400)]
+        public async Task<ActionResult<List<RoleDTO>>> GetRoles([FromQuery] GetRolesQuery query)
         {
-            var roles = await _roleBS.GetAllAsync();
-            return StatusCode((int)HttpStatusCode.OK, roles);
+            var result = await _Mediator.Send(query);
+            return StatusCode((int)HttpStatusCode.OK, result);
         }
     }
 }

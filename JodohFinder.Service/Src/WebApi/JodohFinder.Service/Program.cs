@@ -1,5 +1,5 @@
 using JodohFinder.DbContextEF;
-using JodohFinder.Service.StartupExtension;
+using JodohFinder.Service;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,8 +19,12 @@ builder.Services.AddSwaggerGen().AddSwaggerGenNewtonsoftSupport();
 
 builder.Services.AddApplication();
 
+builder.Services.AddExceptionHandler<ExceptionExtension>();
+builder.Services.AddProblemDetails();
+
 var app = builder.Build();
 
+app.UseExceptionHandler();
 app.UseSwagger();
 app.UseSwaggerUI();
 

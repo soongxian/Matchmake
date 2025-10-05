@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\JodohFinder.Domain\JodohFinder.Domain.csproj" />
+    <ProjectReference Include="..\..\Domain\JodohFinder.Guard\JodohFinder.Guard.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,7 +3,7 @@ using JodohFinder.Role.UseCase;
 using MediatR;
 using System.Reflection;
 
-namespace JodohFinder.Service.StartupExtension
+namespace JodohFinder.Service
 {
     public static class ApplicationExtension
     {

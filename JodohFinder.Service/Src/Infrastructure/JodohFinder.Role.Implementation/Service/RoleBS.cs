@@ -3,7 +3,7 @@ using JodohFinder.Domain;
 using JodohFinder.Role.UseCase;
 using Microsoft.EntityFrameworkCore;
 
-namespace JodohFinder.Role.Implementation
+namespace JodohFinder.Role.Implementation.Service
 {
     public class RoleBS : IRoleBS
     {
@@ -14,13 +14,13 @@ namespace JodohFinder.Role.Implementation
             _dbContext = dbContext;
         }
 
-        public async Task<List<JF_ROLE>> GetAllAsync(CancellationToken cancellationToken = default)
+        public async Task<List<JF_ROLE>> GetAsync(Guid? id, CancellationToken cancellationToken = default)
         {
-            return await _dbContext.JF_Role.ToListAsync(cancellationToken);
-        }
+            if (id is null)
+            {
+                return await _dbContext.JF_Role.ToListAsync(cancellationToken);
+            }
 
-        public async Task<List<JF_ROLE>> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
-        {
             var role = await _dbContext.JF_Role.FirstOrDefaultAsync(r => r.ROLE_ID == id, cancellationToken);
             if (role is null)
             {

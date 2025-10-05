@@ -16,4 +16,8 @@
     <ProjectReference Include="..\JodohFinder.DbContextEF\JodohFinder.DbContextEF.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Role\Implementation\" />
+  </ItemGroup>
+
 </Project>

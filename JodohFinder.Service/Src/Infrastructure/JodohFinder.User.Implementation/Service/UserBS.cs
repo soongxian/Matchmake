@@ -2,11 +2,10 @@
 using JodohFinder.DbContextEF;
 using JodohFinder.Domain;
 using JodohFinder.Guard;
-using JodohFinder.User.Implementation;
 using JodohFinder.User.UseCase;
 using Microsoft.EntityFrameworkCore;
 
-namespace JodohFinder.User.Service
+namespace JodohFinder.User.Implementation.Service
 {
     public class UserBS : IUserBS
     {

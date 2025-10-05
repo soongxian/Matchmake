@@ -1,6 +1,6 @@
-﻿using JodohFinder.Role.Implementation;
+﻿using JodohFinder.Role.Implementation.Service;
 using JodohFinder.Role.UseCase;
-using JodohFinder.User.Service;
+using JodohFinder.User.Implementation.Service;
 using JodohFinder.User.UseCase;
 using MediatR;
 using System.Reflection;

@@ -1,5 +1,4 @@
-﻿using JodohFinder.Domain;
-using JodohFinder.Guard;
+﻿using JodohFinder.Guard;
 using MediatR;
 
 namespace JodohFinder.Role.UseCase.Role.GetRole
@@ -15,23 +14,14 @@ namespace JodohFinder.Role.UseCase.Role.GetRole
 
         public async Task<List<RoleDTO>> Handle(GetRolesQuery request, CancellationToken cancellationToken)
         {
-            List<JF_ROLE> roles;
-
-            if (request.Id.HasValue)
+            Guid? roleId = request.Id ?? null;
+            var role = await _roleBS.GetAsync(roleId);
+            if (role is null)
             {
-                var role = await _roleBS.GetByIdAsync(request.Id.Value);
-                if (role is null)
-                {
-                    throw new GuardNotFoundException(request.Id.Value.ToString());
-                }
-                roles = role;
-            }
-            else
-            {
-                roles = await _roleBS.GetAllAsync(cancellationToken);
+                throw new GuardNotFoundException(roleId.ToString());
             }
 
-            return roles.Select(r => r.JF_RoleToDto()).ToList();
+            return role.Select(r => r.JF_RoleToDto()).ToList();
         }
     }
 }

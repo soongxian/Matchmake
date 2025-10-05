@@ -44,6 +44,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JodohFinder.User.Implementa
 		{E18BD566-0634-47BC-85BC-2C1C9E2C9110} = {E18BD566-0634-47BC-85BC-2C1C9E2C9110}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JodohFinder.Voucher.UseCase", "Src\Application\JodohFinder.Voucher.UseCase\JodohFinder.Voucher.UseCase.csproj", "{F79EA2DB-696A-4241-9559-739E62E525FF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3153B6C6-80DD-442F-9EAF-5B4DE183A360} = {3153B6C6-80DD-442F-9EAF-5B4DE183A360}
+		{E18BD566-0634-47BC-85BC-2C1C9E2C9110} = {E18BD566-0634-47BC-85BC-2C1C9E2C9110}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JodohFinder.Voucher.Implementation", "Src\Infrastructure\JodohFinder.Voucher.Implementation\JodohFinder.Voucher.Implementation.csproj", "{62448115-0C61-4613-95BA-B679FF221C76}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F79EA2DB-696A-4241-9559-739E62E525FF} = {F79EA2DB-696A-4241-9559-739E62E525FF}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +97,14 @@ Global
 		{97549742-8041-4B47-A050-C0A7DBCCB4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97549742-8041-4B47-A050-C0A7DBCCB4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97549742-8041-4B47-A050-C0A7DBCCB4E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F79EA2DB-696A-4241-9559-739E62E525FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79EA2DB-696A-4241-9559-739E62E525FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79EA2DB-696A-4241-9559-739E62E525FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79EA2DB-696A-4241-9559-739E62E525FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62448115-0C61-4613-95BA-B679FF221C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62448115-0C61-4613-95BA-B679FF221C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62448115-0C61-4613-95BA-B679FF221C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62448115-0C61-4613-95BA-B679FF221C76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +123,8 @@ Global
 		{66B82F56-0BBC-0E7B-EDEF-84F71387CC92} = {328C615D-4E06-40B5-A216-A1F55B023CF9}
 		{3153B6C6-80DD-442F-9EAF-5B4DE183A360} = {EC30F0BE-8AA6-444B-B192-688FBB98C185}
 		{97549742-8041-4B47-A050-C0A7DBCCB4E3} = {328C615D-4E06-40B5-A216-A1F55B023CF9}
+		{F79EA2DB-696A-4241-9559-739E62E525FF} = {5F8CFDB6-652E-4C8D-9C7C-28DAF5AAADAE}
+		{62448115-0C61-4613-95BA-B679FF221C76} = {328C615D-4E06-40B5-A216-A1F55B023CF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83FCC896-E3B1-4ECF-A6C4-EED958AC62FA}

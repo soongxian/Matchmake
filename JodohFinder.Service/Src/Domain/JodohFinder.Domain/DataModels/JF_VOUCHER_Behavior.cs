@@ -1,11 +1,18 @@
-﻿namespace JodohFinder.Domain.DataModels
+﻿namespace JodohFinder.Domain
 {
     public partial class JF_VOUCHER
     {
-        // To do
-        //public JF_VOUCHER InsertVoucher()
-        //{
+        public JF_VOUCHER CreateVoucher(Guid voucherId, string voucherCode, DateTime voucherCreDate, Guid voucherCreBy, int voucherIsUsed)
+        {
+            var record = new JF_VOUCHER(
+                voucherId: voucherId,
+                voucherCode: voucherCode,
+                voucherCreDate: voucherCreDate,
+                voucherCreBy: voucherCreBy,
+                voucherIsUsed: voucherIsUsed
+            );
 
-        //}
+            return record;
+        }
     }
 }

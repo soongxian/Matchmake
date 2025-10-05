@@ -17,6 +17,11 @@ namespace JodohFinder.Entity.Configuration
             builder.Property(a => a.VOUCHER_CREDATE)
                    .IsRequired();
 
+            builder.HasOne(a => a.JF_USER)
+                   .WithMany(p => p.JF_VOUCHER)
+                   .HasForeignKey(p => p.VOUCHER_CREBY)
+                   .OnDelete(DeleteBehavior.Restrict);
+
             builder.Property(a => a.VOUCHER_USEDATE);
         }
     }

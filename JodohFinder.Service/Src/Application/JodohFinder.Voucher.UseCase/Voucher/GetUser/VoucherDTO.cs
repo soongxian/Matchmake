@@ -1,6 +1,6 @@
-﻿namespace JodohFinder.Domain
+﻿namespace JodohFinder.Voucher.UseCase
 {
-    public partial class JF_VOUCHER
+    public class VoucherDTO
     {
         public Guid VOUCHER_ID { get; set; }
         public string VOUCHER_CODE { get; set; }
@@ -8,14 +8,5 @@
         public Guid VOUCHER_CREBY { get; set; }
         public DateTime? VOUCHER_USEDATE { get; set; }
         public int VOUCHER_ISUSED { get; set; }
-
-        public JF_USER JF_USER { get; set; }
-
-        public JF_VOUCHER()
-        {
-            InitializePartial();
-        }
-
-        partial void InitializePartial();
     }
 }

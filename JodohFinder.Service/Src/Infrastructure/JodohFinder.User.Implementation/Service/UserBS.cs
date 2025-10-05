@@ -23,7 +23,7 @@ namespace JodohFinder.User.Implementation.Service
 
             if (user is null)
             {
-                return null;
+                throw new GuardNotFoundException(userId.ToString());
             }
 
             _dbContext.JF_User.Remove(user);

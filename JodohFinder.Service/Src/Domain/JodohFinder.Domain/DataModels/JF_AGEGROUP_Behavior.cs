@@ -1,4 +1,4 @@
-﻿namespace JodohFinder.Domain.DataModels
+﻿namespace JodohFinder.Domain
 {
     public partial class JF_AGEGROUP
     {

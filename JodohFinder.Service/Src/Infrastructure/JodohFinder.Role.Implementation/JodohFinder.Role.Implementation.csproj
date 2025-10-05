@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Role\**" />
+    <EmbeddedResource Remove="Role\**" />
+    <None Remove="Role\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="9.3.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
   </ItemGroup>
@@ -14,10 +20,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Application\JodohFinder.Role.UseCase\JodohFinder.Role.UseCase.csproj" />
     <ProjectReference Include="..\JodohFinder.DbContextEF\JodohFinder.DbContextEF.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Role\Implementation\" />
   </ItemGroup>
 
 </Project>

@@ -7,18 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="User\**" />
-    <EmbeddedResource Remove="User\**" />
-    <None Remove="User\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="9.3.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Application\JodohFinder.User.UseCase\JodohFinder.User.UseCase.csproj" />
+    <ProjectReference Include="..\..\Application\JodohFinder.Voucher.UseCase\JodohFinder.Voucher.UseCase.csproj" />
     <ProjectReference Include="..\JodohFinder.DbContextEF\JodohFinder.DbContextEF.csproj" />
+    <ProjectReference Include="..\JodohFinder.User.Implementation\JodohFinder.User.Implementation.csproj" />
   </ItemGroup>
 
 </Project>

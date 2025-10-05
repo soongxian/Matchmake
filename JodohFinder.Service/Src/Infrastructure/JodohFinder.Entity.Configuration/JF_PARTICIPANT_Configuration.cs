@@ -26,11 +26,6 @@ namespace JodohFinder.Entity.Configuration
             builder.Property(p => p.PARTICIPANT_CREDATE)
                 .HasDefaultValueSql("GETUTCDATE()");
 
-            builder.HasOne(p => p.JF_VOUCHER)
-                .WithOne(v => v.JF_PARTICIPANT)
-                .HasForeignKey<JF_PARTICIPANT>(p => p.PARTICIPANT_VOUCHER_ID)
-                .OnDelete(DeleteBehavior.Restrict);
-
             builder.HasOne(p => p.JF_AGEGROUP)
                 .WithMany(a => a.JF_PARTICIPANT)
                 .HasForeignKey(p => p.PARTICIPANT_AGEGROUP_ID)
